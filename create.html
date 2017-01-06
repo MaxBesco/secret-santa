@@ -1,0 +1,57 @@
+  <!DOCTYPE html>
+<html>
+<head>
+	<title>Create an Exchange</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/create.js"></script>
+		<script src="js/Database.js"></script>
+
+	     <!-- <link rel="stylesheet" href="css/create.css">-->
+
+</head>
+<body>
+<div data-role="form" id="create">
+
+	<div data-role="header" class="ui-bar ui-bar-a" data-theme="a">
+		<center><h1>Create a Secret Santa Exchange</h1></center>
+	</div>
+	<form action="/" method="post">
+          
+		<div class="top-row">
+            <div class="field-wrap">
+			<label>
+				Title<span class="req">*</span>
+			</label>
+				<input id="title" type="text" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+			<label>
+				Description<span class="req"></span>
+            </label>
+				<input id="description" type="text"required autocomplete="off"/>
+			</div>
+        </div>
+        <div id = "emails">
+            <div class="field-wrap">
+                <label>
+                  Email Address<span class="req">*</span>
+                </label>
+			    <input id="email1" type="email"required autocomplete="off"/>
+            </div>
+        </div>
+		
+        <input onclick="addEmail()"type="button" class="button button-block" value="+">
+	<input onclick="createExchange()"type="button" class="button button-block" value="Create">
+          
+    </form>
+	</div>
+
+</script>
+</body>
+</html>
